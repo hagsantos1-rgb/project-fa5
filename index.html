@@ -3,157 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#07090d" />
+  <meta name="theme-color" content="#080a0d" />
   <title>Project FA5 — Dossiê Técnico</title>
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="assets/css/app.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <aside class="sidebar" aria-label="Navegação principal">
-    <div class="brand compact">
-      <div class="badge-logo">FA5</div>
-      <div><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
-    </div>
-    <nav>
-      <button class="nav-item active" data-page="dashboard">Dashboard</button>
-      <button class="nav-item" data-page="veiculo">Veículo</button>
-      <button class="nav-item" data-page="servicos">Serviços</button>
-      <button class="nav-item" data-page="timeline">Timeline</button>
-      <button class="nav-item" data-page="documentos">Documentos</button>
-      <button class="nav-item" data-page="qr">QR</button>
-    </nav>
-    <div class="sidebar-foot">
-      <span>V2.5</span>
-      <b>GitHub Pages</b>
-    </div>
-  </aside>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">FA5</span><div><b>PROJECT FA5</b><small>Dossiê Técnico</small></div></div>
+      <nav class="nav" id="nav">
+        <button data-page="home" class="active">Início</button>
+        <button data-page="vehicle">Veículo</button>
+        <button data-page="service">Serviços</button>
+        <button data-page="timeline">Histórico</button>
+        <button data-page="docs">Documentos</button>
+        <button data-page="settings">Sistema</button>
+      </nav>
+      <div class="sidebar-foot"><small>GitHub Pages</small><b>V3.0</b></div>
+    </aside>
 
-  <main class="app-shell">
-    <header class="topbar">
-      <div class="brand">
-        <div class="badge-logo">FA5</div>
-        <div><strong>PROJECT FA5</strong><span>Honda Civic Si FA5 • 2007/2007</span></div>
-      </div>
-      <button class="install-btn" id="installBtn">Instalar App</button>
-    </header>
+    <main class="app">
+      <header class="topbar">
+        <div><small class="eyebrow">Honda Civic Si FA5</small><h1 id="pageTitle">Início</h1></div>
+        <button class="install" id="installBtn">Instalar App</button>
+      </header>
 
-    <section class="hero page active" id="dashboard">
-      <div class="hero-copy">
-        <span class="eyebrow">HONDA CIVIC SI FA5</span>
-        <h1>Dossiê<br>Técnico</h1>
-        <p>Registro digital oficial do Project FA5. Histórico técnico iniciado em <strong>08/07/2026</strong> com <strong>200.925 km</strong>.</p>
-        <div class="actions">
-          <button class="primary" onclick="window.print()">Exportar PDF</button>
-          <button class="secondary" data-go="servicos">Livro de Serviços</button>
+      <section class="page active" id="home">
+        <div class="hero-card">
+          <div class="hero-copy"><span class="status-dot"></span><small>Operacional</small><h2>PROJECT FA5</h2><p>Honda Civic Si FA5 • 2007/2007 • 200.925 km</p></div>
+          <div class="hero-meter"><span>100%</span><small>Histórico atual</small></div>
         </div>
-      </div>
-      <div class="status-panel glass">
-        <div class="status-title"><span class="pulse"></span> Operacional</div>
-        <dl>
-          <div><dt>Quilometragem</dt><dd>200.925 km</dd></div>
-          <div><dt>Ano/modelo</dt><dd>2007/2007</dd></div>
-          <div><dt>Combustível</dt><dd>Etanol E100</dd></div>
-          <div><dt>Pneus</dt><dd>Itaro 235/35R18</dd></div>
-        </dl>
-      </div>
-    </section>
+        <div class="grid six" id="healthGrid"></div>
+        <div class="grid two">
+          <article class="panel"><h3>Próximas revisões</h3><div id="maintenanceList"></div></article>
+          <article class="panel"><h3>Linha do tempo</h3><div id="miniTimeline"></div></article>
+        </div>
+      </section>
 
-    <section class="quick-grid dashboard-only">
-      <article class="mini-card"><span>Saúde geral</span><strong>Em dia</strong><small>Base inicial documentada</small></article>
-      <article class="mini-card"><span>Último registro</span><strong>08/07/2026</strong><small>Registro inicial</small></article>
-      <article class="mini-card"><span>Próxima revisão</span><strong>A definir</strong><small>Após troca de óleo</small></article>
-      <article class="mini-card"><span>Pressão pneus</span><strong>32 / 31 psi</strong><small>Dianteira / traseira</small></article>
-    </section>
+      <section class="page" id="vehicle">
+        <div class="grid two">
+          <article class="panel certificate"><small>Certificado do veículo</small><h2>Honda Civic Si FA5</h2><div class="cert-grid" id="vehicleInfo"></div></article>
+          <article class="panel"><h3>Configuração atual</h3><div id="configList"></div></article>
+        </div>
+      </section>
 
-    <section class="panel dashboard-only">
-      <div class="section-title"><span>Indicadores</span><h2>Saúde do veículo</h2></div>
-      <div class="health-grid">
-        <div class="health"><div class="ring good">95</div><strong>Motor</strong><span>Operacional</span></div>
-        <div class="health"><div class="ring good">98</div><strong>Combustível</strong><span>Operacional</span></div>
-        <div class="health"><div class="ring warn">--</div><strong>Freios</strong><span>Não documentado</span></div>
-        <div class="health"><div class="ring warn">--</div><strong>Suspensão</strong><span>Não documentado</span></div>
-        <div class="health"><div class="ring good">90</div><strong>Elétrica</strong><span>FT600 documentada</span></div>
-      </div>
-    </section>
+      <section class="page" id="service">
+        <article class="panel"><h3>Livro de Serviços</h3><div id="serviceList" class="service-list"></div></article>
+      </section>
 
-    <section class="page" id="veiculo">
-      <div class="section-title"><span>Ficha do veículo</span><h2>Identificação e configuração atual</h2></div>
-      <div class="split">
-        <article class="panel">
-          <h3>Identificação</h3>
-          <ul class="spec-list">
-            <li><span>Veículo</span><b>Honda Civic Si FA5</b></li>
-            <li><span>Ano/modelo</span><b>2007/2007</b></li>
-            <li><span>Cor</span><b>Vermelho</b></li>
-            <li><span>Quilometragem</span><b>200.925 km</b></li>
-            <li><span>Aquisição</span><b>Fevereiro/2025</b></li>
-            <li><span>Histórico iniciado</span><b>08/07/2026</b></li>
-          </ul>
-        </article>
-        <article class="panel">
-          <h3>Configuração atual</h3>
-          <ul class="spec-list">
-            <li><span>Motor</span><b>K20Z3 OEM interno</b></li>
-            <li><span>ECU</span><b>FuelTech FT600</b></li>
-            <li><span>Combustível</span><b>Etanol E100</b></li>
-            <li><span>Admissão</span><b>ITBs</b></li>
-            <li><span>Combustível</span><b>Catch tank, bombas e bicos maiores, linhas novas</b></li>
-            <li><span>Rodas/Pneus</span><b>OZ 18” • Itaro 235/35R18</b></li>
-          </ul>
-        </article>
-      </div>
-    </section>
+      <section class="page" id="timeline">
+        <article class="panel"><h3>Histórico por data</h3><div id="timelineList" class="timeline"></div></article>
+      </section>
 
-    <section class="page" id="servicos">
-      <div class="section-title"><span>Livro de Serviços</span><h2>Registros documentados</h2></div>
-      <div class="service-card panel">
-        <div class="service-index">001</div>
-        <div><span class="date">08/07/2026 • 200.925 km</span><h3>Registro Inicial do Veículo</h3><p>Criação do dossiê técnico e documentação da configuração atual. Histórico anterior do proprietário antigo não disponível.</p></div>
-        <span class="tag-ok">Concluído</span>
-      </div>
-      <div class="empty panel"><h3>Próximos registros</h3><p>Trocas de óleo, velas, fluidos, freios e demais serviços serão adicionados conforme forem realizados.</p></div>
-    </section>
+      <section class="page" id="docs">
+        <div class="grid three">
+          <article class="doc-card"><span>📄</span><b>Manuais</b><small>Pendente</small></article>
+          <article class="doc-card"><span>🧾</span><b>Notas fiscais</b><small>Pendente</small></article>
+          <article class="doc-card"><span>📷</span><b>Fotos</b><small>Pendente</small></article>
+          <article class="doc-card"><span>📊</span><b>Dinamômetro</b><small>Pendente</small></article>
+          <article class="doc-card"><span>⚙️</span><b>FuelTech</b><small>Pendente</small></article>
+          <article class="doc-card"><span>🔗</span><b>QR Code</b><small>Ativo</small></article>
+        </div>
+        <article class="panel qr-panel"><h3>QR de acesso</h3><img src="qr/qr_project_fa5_v3.png" alt="QR Project FA5"><p>URL: https://hagsantos1-rgb.github.io/project-fa5/</p></article>
+      </section>
 
-    <section class="page" id="timeline">
-      <div class="section-title"><span>Evolução</span><h2>Linha do tempo</h2></div>
-      <div class="timeline">
-        <article><time>Fev/2025</time><div><h3>Aquisição do veículo</h3><p>Data exata não documentada.</p></div></article>
-        <article><time>08/07/2026</time><div><h3>Início do dossiê técnico</h3><p>Registro criado com 200.925 km.</p></div></article>
-        <article><time>08/07/2026</time><div><h3>Configuração atual documentada</h3><p>FuelTech FT600, etanol E100, ITBs, sistema de combustível, escape, rodas e pneus.</p></div></article>
-      </div>
-    </section>
+      <section class="page" id="settings">
+        <div class="grid two">
+          <article class="panel"><h3>Adicionar registro</h3><p>V3 está preparada para a próxima etapa: cadastro dinâmico com banco local e sincronização futura.</p><button class="primary" onclick="alert('Cadastro dinâmico entra na V3.1')">Novo serviço</button></article>
+          <article class="panel"><h3>Exportar</h3><p>Use o navegador para gerar PDF do dossiê atual.</p><button class="primary ghost" onclick="window.print()">Exportar PDF</button></article>
+        </div>
+      </section>
+    </main>
 
-    <section class="page" id="documentos">
-      <div class="section-title"><span>Arquivo</span><h2>Documentos e anexos</h2></div>
-      <div class="doc-grid">
-        <article class="panel doc"><strong>Notas fiscais</strong><span>Pendente</span></article>
-        <article class="panel doc"><strong>Manual Honda</strong><span>A incluir</span></article>
-        <article class="panel doc"><strong>Fotos técnicas</strong><span>Marco zero</span></article>
-        <article class="panel doc"><strong>Dinamômetro</strong><span>Em breve</span></article>
-      </div>
-    </section>
-
-    <section class="page" id="qr">
-      <div class="section-title"><span>Acesso</span><h2>Cartão QR</h2></div>
-      <div class="split">
-        <article class="panel qr-card">
-          <div class="qr-head"><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
-          <img src="cartao_qr_project_fa5_github.png" alt="Cartão QR Project FA5" />
-          <p>Escaneie para acessar o dossiê técnico publicado no GitHub Pages.</p>
-        </article>
-        <article class="panel">
-          <h3>URL oficial</h3>
-          <p class="url">https://hagsantos1-rgb.github.io/project-fa5/</p>
-          <p>Esta URL deve ser usada para o QR definitivo do carro.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-  <nav class="mobile-nav">
-    <button class="active" data-page="dashboard">Início</button><button data-page="veiculo">Veículo</button><button data-page="servicos">Serviços</button><button data-page="timeline">Linha</button><button data-page="qr">QR</button>
-  </nav>
+    <nav class="bottom-nav" id="bottomNav">
+      <button data-page="home" class="active">Início</button><button data-page="vehicle">Veículo</button><button data-page="service">Serviços</button><button data-page="timeline">Histórico</button><button data-page="docs">Docs</button>
+    </nav>
+  </div>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

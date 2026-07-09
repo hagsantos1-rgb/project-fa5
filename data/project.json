@@ -1,0 +1,41 @@
+{
+  "vehicle": {
+    "project": "Project FA5",
+    "name": "Honda Civic Si FA5",
+    "year": "2007/2007",
+    "color": "Vermelho",
+    "mileage": "200.925 km",
+    "engine": "Honda K20Z3",
+    "transmission": "Manual 6 marchas",
+    "fuel": "Etanol E100",
+    "started": "08/07/2026",
+    "acquired": "Fevereiro/2025",
+    "url": "https://hagsantos1-rgb.github.io/project-fa5/"
+  },
+  "configuration": [
+    {"system":"Motor","value":"K20Z3 OEM interno","status":"Operacional"},
+    {"system":"ECU","value":"FuelTech FT600","status":"Operacional"},
+    {"system":"Admissão","value":"ITBs","status":"Operacional"},
+    {"system":"Combustível","value":"Etanol E100, catch tank, bombas maiores, bicos maiores, linhas novas","status":"Operacional"},
+    {"system":"Escape","value":"Escape completo","status":"Operacional"},
+    {"system":"Rodas","value":"OZ Ultraleggera 18\"","status":"Operacional"},
+    {"system":"Pneus","value":"Itaro Semi Slick 235/35R18 — 32 psi dianteira / 31 psi traseira","status":"Operacional"},
+    {"system":"Freios","value":"OEM Honda — não documentado em detalhe","status":"Monitorar"},
+    {"system":"Suspensão","value":"OEM Honda — não documentado em detalhe","status":"Operacional"}
+  ],
+  "serviceRecords": [
+    {"id":"001","date":"08/07/2026","mileage":"200.925 km","title":"Registro inicial do veículo","type":"Baseline","status":"Concluído","description":"Início do dossiê técnico digital. Configuração atual documentada. Histórico anterior do proprietário antigo indisponível."}
+  ],
+  "timeline": [
+    {"date":"Fevereiro/2025","title":"Aquisição do veículo","detail":"Data exata não documentada.","confidence":"Estimado"},
+    {"date":"08/07/2026","title":"Dossiê Técnico iniciado","detail":"Histórico digital iniciado em 200.925 km.","confidence":"Confirmado"},
+    {"date":"08/07/2026","title":"Configuração atual registrada","detail":"FT600, etanol, ITBs, sistema de combustível, escape, OZ e Itaro.","confidence":"Confirmado"}
+  ],
+  "maintenance": [
+    {"item":"Óleo + filtro","due":"A definir","note":"Registrar na próxima substituição."},
+    {"item":"Velas","due":"A definir","note":"Recomendação futura: NGK ILZKR8H8S, gap 0,80 mm."},
+    {"item":"Fluido de freio","due":"A definir","note":"Registrar marca e data na próxima troca."},
+    {"item":"Óleo do câmbio","due":"A definir","note":"Registrar na próxima substituição."},
+    {"item":"Arrefecimento","due":"A definir","note":"Confirmar fluido utilizado."}
+  ]
+}
