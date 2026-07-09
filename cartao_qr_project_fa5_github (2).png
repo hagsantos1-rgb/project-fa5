@@ -1,0 +1,28 @@
+# Project FA5 — Dossiê Técnico
+
+Dossiê técnico digital do Honda Civic Si FA5.
+
+## URL pública
+
+https://hagsantos1-rgb.github.io/project-fa5/
+
+## Como publicar no GitHub Pages
+
+1. Extraia este ZIP.
+2. Faça upload de **todo o conteúdo da pasta** para o repositório `project-fa5`.
+3. Garanta que `index.html` fique na raiz do repositório.
+4. Vá em Settings → Pages.
+5. Selecione `Deploy from a branch`.
+6. Branch: `main`.
+7. Folder: `/ (root)`.
+8. Clique em Save.
+
+## Dados atuais
+
+- Veículo: Honda Civic Si FA5
+- Ano/modelo: 2007/2007
+- Cor: vermelho
+- Quilometragem inicial do dossiê: 200.925 km
+- Histórico digital iniciado: 08/07/2026
+- Pneus: Itaro Semi Slick 235/35R18
+- Pressão: dianteira 32 psi / traseira 31 psi
