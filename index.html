@@ -3,181 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#070a0f" />
+  <meta name="theme-color" content="#07090d" />
   <title>Project FA5 — Dossiê Técnico</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="icon" href="assets/icons/icon-192.png" />
 </head>
 <body>
-  <div class="app-shell">
+  <div class="noise"></div>
+  <aside class="sidebar" aria-label="Navegação principal">
+    <div class="brand compact">
+      <div class="badge-logo">FA5</div>
+      <div><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
+    </div>
+    <nav>
+      <button class="nav-item active" data-page="dashboard">Dashboard</button>
+      <button class="nav-item" data-page="veiculo">Veículo</button>
+      <button class="nav-item" data-page="servicos">Serviços</button>
+      <button class="nav-item" data-page="timeline">Timeline</button>
+      <button class="nav-item" data-page="documentos">Documentos</button>
+      <button class="nav-item" data-page="qr">QR</button>
+    </nav>
+    <div class="sidebar-foot">
+      <span>V2.5</span>
+      <b>GitHub Pages</b>
+    </div>
+  </aside>
+
+  <main class="app-shell">
     <header class="topbar">
-      <div class="brand-block">
-        <div class="brand-mark">FA5</div>
-        <div>
-          <strong>PROJECT FA5</strong>
-          <span>Dossiê Técnico do Veículo</span>
-        </div>
+      <div class="brand">
+        <div class="badge-logo">FA5</div>
+        <div><strong>PROJECT FA5</strong><span>Honda Civic Si FA5 • 2007/2007</span></div>
       </div>
       <button class="install-btn" id="installBtn">Instalar App</button>
     </header>
 
-    <main>
-      <section class="hero-card glass">
-        <div class="hero-copy">
-          <span class="eyebrow">Honda Civic Si FA5</span>
-          <h1>Dossiê Técnico</h1>
-          <p>Registro digital oficial do Project FA5. Histórico técnico iniciado em <strong>08/07/2026</strong> com <strong>200.925 km</strong>.</p>
-          <div class="actions">
-            <button class="primary" onclick="window.print()">Exportar PDF</button>
-            <button class="secondary" data-go="servicos">Livro de Serviços</button>
-          </div>
+    <section class="hero page active" id="dashboard">
+      <div class="hero-copy">
+        <span class="eyebrow">HONDA CIVIC SI FA5</span>
+        <h1>Dossiê<br>Técnico</h1>
+        <p>Registro digital oficial do Project FA5. Histórico técnico iniciado em <strong>08/07/2026</strong> com <strong>200.925 km</strong>.</p>
+        <div class="actions">
+          <button class="primary" onclick="window.print()">Exportar PDF</button>
+          <button class="secondary" data-go="servicos">Livro de Serviços</button>
         </div>
-        <div class="vehicle-status">
-          <div class="status-line"><span></span> Operacional</div>
-          <dl>
-            <div><dt>Quilometragem</dt><dd>200.925 km</dd></div>
-            <div><dt>Ano/modelo</dt><dd>2007/2007</dd></div>
-            <div><dt>Combustível</dt><dd>Etanol E100</dd></div>
-            <div><dt>Pneus</dt><dd>Itaro 235/35R18</dd></div>
-          </dl>
-        </div>
-      </section>
+      </div>
+      <div class="status-panel glass">
+        <div class="status-title"><span class="pulse"></span> Operacional</div>
+        <dl>
+          <div><dt>Quilometragem</dt><dd>200.925 km</dd></div>
+          <div><dt>Ano/modelo</dt><dd>2007/2007</dd></div>
+          <div><dt>Combustível</dt><dd>Etanol E100</dd></div>
+          <div><dt>Pneus</dt><dd>Itaro 235/35R18</dd></div>
+        </dl>
+      </div>
+    </section>
 
-      <nav class="tabs" aria-label="Navegação principal">
-        <button class="tab active" data-tab="dashboard">Dashboard</button>
-        <button class="tab" data-tab="veiculo">Veículo</button>
-        <button class="tab" data-tab="servicos">Serviços</button>
-        <button class="tab" data-tab="timeline">Timeline</button>
-        <button class="tab" data-tab="documentos">Documentos</button>
-        <button class="tab" data-tab="qr">QR</button>
-      </nav>
+    <section class="quick-grid dashboard-only">
+      <article class="mini-card"><span>Saúde geral</span><strong>Em dia</strong><small>Base inicial documentada</small></article>
+      <article class="mini-card"><span>Último registro</span><strong>08/07/2026</strong><small>Registro inicial</small></article>
+      <article class="mini-card"><span>Próxima revisão</span><strong>A definir</strong><small>Após troca de óleo</small></article>
+      <article class="mini-card"><span>Pressão pneus</span><strong>32 / 31 psi</strong><small>Dianteira / traseira</small></article>
+    </section>
 
-      <section class="page active" id="dashboard">
-        <div class="quick-grid">
-          <article class="mini-card"><span>Saúde geral</span><strong>Em dia</strong><small>Base inicial documentada</small></article>
-          <article class="mini-card"><span>Último registro</span><strong>08/07/2026</strong><small>Registro inicial</small></article>
-          <article class="mini-card"><span>Próxima revisão</span><strong>A definir</strong><small>Após troca de óleo</small></article>
-          <article class="mini-card"><span>Pressão pneus</span><strong>32 / 31 psi</strong><small>Dianteira / traseira</small></article>
-        </div>
+    <section class="panel dashboard-only">
+      <div class="section-title"><span>Indicadores</span><h2>Saúde do veículo</h2></div>
+      <div class="health-grid">
+        <div class="health"><div class="ring good">95</div><strong>Motor</strong><span>Operacional</span></div>
+        <div class="health"><div class="ring good">98</div><strong>Combustível</strong><span>Operacional</span></div>
+        <div class="health"><div class="ring warn">--</div><strong>Freios</strong><span>Não documentado</span></div>
+        <div class="health"><div class="ring warn">--</div><strong>Suspensão</strong><span>Não documentado</span></div>
+        <div class="health"><div class="ring good">90</div><strong>Elétrica</strong><span>FT600 documentada</span></div>
+      </div>
+    </section>
 
-        <section class="panel">
-          <div class="panel-head">
-            <span>Indicadores</span>
-            <b>Saúde do veículo</b>
-          </div>
-          <div class="health-grid">
-            <div class="health-card ok"><i></i><strong>Motor</strong><span>Operacional</span></div>
-            <div class="health-card ok"><i></i><strong>Combustível</strong><span>Operacional</span></div>
-            <div class="health-card unknown"><i></i><strong>Freios</strong><span>Não documentado</span></div>
-            <div class="health-card unknown"><i></i><strong>Suspensão</strong><span>Não documentado</span></div>
-            <div class="health-card ok"><i></i><strong>Elétrica</strong><span>Operacional</span></div>
-            <div class="health-card unknown"><i></i><strong>Arrefecimento</strong><span>Não documentado</span></div>
-          </div>
-        </section>
-
-        <section class="panel split-panel">
-          <div>
-            <div class="panel-head"><span>Configuração</span><b>Atual</b></div>
-            <ul class="spec-list compact">
-              <li><span>Motor</span><b>Honda K20Z3 OEM interno</b></li>
-              <li><span>ECU</span><b>FuelTech FT600</b></li>
-              <li><span>Combustível</span><b>Etanol E100</b></li>
-              <li><span>Admissão</span><b>ITBs</b></li>
-              <li><span>Sistema de combustível</span><b>Catch tank, bombas, bicos e linhas novas</b></li>
-              <li><span>Rodas</span><b>OZ Ultraleggera 18”</b></li>
-            </ul>
-          </div>
-          <div class="lifetime-card">
-            <span>Histórico do veículo</span>
-            <strong>200.925 km</strong>
-            <p>Quilometragem de início do acompanhamento digital.</p>
-            <div class="progress"><em style="width:100%"></em></div>
-            <small>Histórico atual: 100% rastreável desde 08/07/2026.</small>
-          </div>
-        </section>
-      </section>
-
-      <section class="page" id="veiculo">
-        <section class="panel">
-          <div class="panel-head"><span>Identificação</span><b>Dados do veículo</b></div>
+    <section class="page" id="veiculo">
+      <div class="section-title"><span>Ficha do veículo</span><h2>Identificação e configuração atual</h2></div>
+      <div class="split">
+        <article class="panel">
+          <h3>Identificação</h3>
           <ul class="spec-list">
-            <li><span>Marca / modelo</span><b>Honda Civic Si FA5</b></li>
+            <li><span>Veículo</span><b>Honda Civic Si FA5</b></li>
             <li><span>Ano/modelo</span><b>2007/2007</b></li>
             <li><span>Cor</span><b>Vermelho</b></li>
-            <li><span>Motor</span><b>K20Z3</b></li>
-            <li><span>Transmissão</span><b>Manual 6 marchas</b></li>
-            <li><span>Aquisição</span><b>Fevereiro/2025 — data exata não documentada</b></li>
-            <li><span>Início do dossiê</span><b>08/07/2026</b></li>
-            <li><span>VIN</span><b>Mascarado por segurança</b></li>
+            <li><span>Quilometragem</span><b>200.925 km</b></li>
+            <li><span>Aquisição</span><b>Fevereiro/2025</b></li>
+            <li><span>Histórico iniciado</span><b>08/07/2026</b></li>
           </ul>
-        </section>
-      </section>
+        </article>
+        <article class="panel">
+          <h3>Configuração atual</h3>
+          <ul class="spec-list">
+            <li><span>Motor</span><b>K20Z3 OEM interno</b></li>
+            <li><span>ECU</span><b>FuelTech FT600</b></li>
+            <li><span>Combustível</span><b>Etanol E100</b></li>
+            <li><span>Admissão</span><b>ITBs</b></li>
+            <li><span>Combustível</span><b>Catch tank, bombas e bicos maiores, linhas novas</b></li>
+            <li><span>Rodas/Pneus</span><b>OZ 18” • Itaro 235/35R18</b></li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <section class="page" id="servicos">
-        <section class="panel">
-          <div class="panel-head"><span>Livro</span><b>Registros de serviço</b></div>
-          <article class="service-card">
-            <div class="service-no">001</div>
-            <div>
-              <span>08/07/2026 • 200.925 km</span>
-              <h3>Registro inicial do veículo</h3>
-              <p>Criação do dossiê técnico e documentação da configuração atual. Histórico anterior indisponível.</p>
-              <div class="chips"><i>Concluído</i><i>Marco zero</i><i>Documentado</i></div>
-            </div>
-          </article>
-        </section>
-        <section class="panel">
-          <div class="panel-head"><span>Cronograma</span><b>Próximas revisões</b></div>
-          <div class="schedule-grid">
-            <div><span>Óleo + filtro</span><b>A definir</b><small>Registrar produto e km na troca</small></div>
-            <div><span>Velas</span><b>NGK ILZKR8H8S</b><small>Recomendação inicial • gap 0,80 mm</small></div>
-            <div><span>Fluido de freio</span><b>Não documentado</b><small>Registrar quando substituir</small></div>
-            <div><span>Torque rodas</span><b>108 N·m</b><small>80 lbf·ft</small></div>
-          </div>
-        </section>
-      </section>
+    <section class="page" id="servicos">
+      <div class="section-title"><span>Livro de Serviços</span><h2>Registros documentados</h2></div>
+      <div class="service-card panel">
+        <div class="service-index">001</div>
+        <div><span class="date">08/07/2026 • 200.925 km</span><h3>Registro Inicial do Veículo</h3><p>Criação do dossiê técnico e documentação da configuração atual. Histórico anterior do proprietário antigo não disponível.</p></div>
+        <span class="tag-ok">Concluído</span>
+      </div>
+      <div class="empty panel"><h3>Próximos registros</h3><p>Trocas de óleo, velas, fluidos, freios e demais serviços serão adicionados conforme forem realizados.</p></div>
+    </section>
 
-      <section class="page" id="timeline">
-        <section class="panel">
-          <div class="panel-head"><span>Evolução</span><b>Linha do tempo</b></div>
-          <div class="timeline">
-            <article><time>Fev/2025</time><b>Aquisição do veículo</b><p>Data exata não documentada.</p></article>
-            <article><time>08/07/2026</time><b>Dossiê técnico iniciado</b><p>Histórico digital criado aos 200.925 km.</p></article>
-            <article><time>08/07/2026</time><b>Configuração atual registrada</b><p>FT600, etanol, ITBs, sistema de combustível, escape, OZ e pneus Itaro.</p></article>
-          </div>
-        </section>
-      </section>
+    <section class="page" id="timeline">
+      <div class="section-title"><span>Evolução</span><h2>Linha do tempo</h2></div>
+      <div class="timeline">
+        <article><time>Fev/2025</time><div><h3>Aquisição do veículo</h3><p>Data exata não documentada.</p></div></article>
+        <article><time>08/07/2026</time><div><h3>Início do dossiê técnico</h3><p>Registro criado com 200.925 km.</p></div></article>
+        <article><time>08/07/2026</time><div><h3>Configuração atual documentada</h3><p>FuelTech FT600, etanol E100, ITBs, sistema de combustível, escape, rodas e pneus.</p></div></article>
+      </div>
+    </section>
 
-      <section class="page" id="documentos">
-        <section class="panel">
-          <div class="panel-head"><span>Arquivo</span><b>Documentos</b></div>
-          <div class="doc-grid">
-            <div><strong>Notas fiscais</strong><span>Aguardando anexos</span></div>
-            <div><strong>Fotos técnicas</strong><span>Marco zero pendente</span></div>
-            <div><strong>Manual Honda</strong><span>Parcialmente documentado</span></div>
-            <div><strong>Mapas FuelTech</strong><span>Aguardando arquivos</span></div>
-          </div>
-        </section>
-      </section>
+    <section class="page" id="documentos">
+      <div class="section-title"><span>Arquivo</span><h2>Documentos e anexos</h2></div>
+      <div class="doc-grid">
+        <article class="panel doc"><strong>Notas fiscais</strong><span>Pendente</span></article>
+        <article class="panel doc"><strong>Manual Honda</strong><span>A incluir</span></article>
+        <article class="panel doc"><strong>Fotos técnicas</strong><span>Marco zero</span></article>
+        <article class="panel doc"><strong>Dinamômetro</strong><span>Em breve</span></article>
+      </div>
+    </section>
 
-      <section class="page" id="qr">
-        <section class="panel qr-panel">
-          <div class="qr-card">
-            <span>PROJECT FA5</span>
-            <strong>DOSSIÊ TÉCNICO</strong>
-            <img src="cartao_qr_project_fa5_github.png" alt="Cartão QR Project FA5" />
-            <small>hagsantos1-rgb.github.io/project-fa5</small>
-          </div>
-          <div>
-            <div class="panel-head"><span>QR permanente</span><b>GitHub Pages</b></div>
-            <p>Este cartão aponta para a URL oficial gratuita do dossiê técnico. Ao atualizar o repositório, o QR continua o mesmo.</p>
-            <a class="secondary link" href="https://hagsantos1-rgb.github.io/project-fa5/">Abrir URL oficial</a>
-          </div>
-        </section>
-      </section>
-    </main>
-  </div>
+    <section class="page" id="qr">
+      <div class="section-title"><span>Acesso</span><h2>Cartão QR</h2></div>
+      <div class="split">
+        <article class="panel qr-card">
+          <div class="qr-head"><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
+          <img src="cartao_qr_project_fa5_github.png" alt="Cartão QR Project FA5" />
+          <p>Escaneie para acessar o dossiê técnico publicado no GitHub Pages.</p>
+        </article>
+        <article class="panel">
+          <h3>URL oficial</h3>
+          <p class="url">https://hagsantos1-rgb.github.io/project-fa5/</p>
+          <p>Esta URL deve ser usada para o QR definitivo do carro.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <nav class="mobile-nav">
+    <button class="active" data-page="dashboard">Início</button><button data-page="veiculo">Veículo</button><button data-page="servicos">Serviços</button><button data-page="timeline">Linha</button><button data-page="qr">QR</button>
+  </nav>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
