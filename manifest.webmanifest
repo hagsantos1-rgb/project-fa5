@@ -1,23 +1,14 @@
 {
   "name": "Project FA5 — Dossiê Técnico",
   "short_name": "Project FA5",
-  "description": "Dossiê técnico digital do Honda Civic Si FA5.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#07090d",
   "theme_color": "#07090d",
-  "lang": "pt-BR",
+  "description": "Dossiê técnico digital do Honda Civic Si FA5.",
   "icons": [
-    {
-      "src": "assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "./assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
