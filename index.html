@@ -1,95 +1,140 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Project FA5 — Digital Vehicle Passport</title>
-<meta name="theme-color" content="#05070a">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="manifest" href="manifest.webmanifest">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Project FA5 — Painel Técnico</title>
+  <meta name="theme-color" content="#07090d">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="app-shell">
+<div class="shell">
   <aside class="sidebar">
     <div class="brand">
-      <div class="logo">FA5</div>
-      <div><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
+      <div class="badge">FA5</div>
+      <div><strong>PROJECT FA5</strong><span>Painel Técnico</span></div>
     </div>
-    <nav>
-      <button class="nav-item active" data-page="dashboard">Dashboard</button>
-      <button class="nav-item" data-page="veiculo">Veículo</button>
-      <button class="nav-item" data-page="servicos">Manutenções</button>
-      <button class="nav-item" data-page="cronograma">Cronograma</button>
-      <button class="nav-item" data-page="docs">Documentos</button>
-      <button class="nav-item" data-page="galeria">Galeria</button>
-      <button class="nav-item" data-page="projeto">Projeto</button>
-      <button class="nav-item" data-page="tecnica">Especificações</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+      <button class="nav-item" data-page="veiculo"><span>◆</span> Veículo</button>
+      <button class="nav-item" data-page="config"><span>◉</span> Configuração</button>
+      <button class="nav-item" data-page="servicos"><span>▤</span> Manutenções</button>
+      <button class="nav-item" data-page="cronograma"><span>◷</span> Cronograma</button>
+      <button class="nav-item" data-page="documentos"><span>▣</span> Documentos</button>
+      <button class="nav-item" data-page="galeria"><span>▧</span> Galeria</button>
+      <button class="nav-item" data-page="especificacoes"><span>⌁</span> Especificações</button>
+      <button class="nav-item" data-page="qr"><span>▦</span> QR</button>
     </nav>
-    <div class="version">GitHub Pages<br><b>Premium Passport</b></div>
+    <div class="side-foot"><span>GitHub Pages</span><b>Cluster V5</b></div>
   </aside>
 
   <main class="main">
     <header class="topbar">
-      <div><span class="eyebrow">Digital Vehicle Passport</span><h1 id="pageTitle">Dashboard</h1></div>
-      <button class="install" id="installBtn">Instalar App</button>
+      <div class="cluster-line">
+        <span class="led green"></span><b>OPERACIONAL</b>
+        <em>200.925 km</em>
+        <em>Etanol E100</em>
+        <em>32 / 31 psi</em>
+      </div>
+      <button id="installBtn" class="install">Instalar App</button>
     </header>
 
     <section id="dashboard" class="page active">
-      <div class="hero-card">
-        <div>
-          <span class="status-dot"></span><span class="status-text">OPERACIONAL</span>
-          <h2>PROJECT FA5</h2>
-          <p>Honda Civic Si FA5 • 2007/2007 • 200.925 km</p>
+      <div class="page-kicker">Honda Civic Si FA5</div>
+      <h1 class="mega">PAINEL TÉCNICO</h1>
+      <div class="hero-grid">
+        <div class="tach-card">
+          <div class="tach">
+            <div class="arc"></div>
+            <div class="needle"></div>
+            <div class="center"><span>97%</span><small>Saúde geral</small></div>
+            <div class="ticks"><span>0</span><span>3</span><span>6</span><span>9</span></div>
+          </div>
+          <div class="tach-caption">Inspirado no cluster OEM do Civic Si</div>
         </div>
-        <div class="score"><span>98%</span><small>Saúde geral</small></div>
+        <div class="status-card">
+          <h2>Project FA5</h2>
+          <dl>
+            <div><dt>Quilometragem</dt><dd>200.925 km</dd></div>
+            <div><dt>Ano/modelo</dt><dd>2007/2007</dd></div>
+            <div><dt>Combustível</dt><dd>Etanol E100</dd></div>
+            <div><dt>Pneus</dt><dd>Itaro 235/35R18</dd></div>
+          </dl>
+        </div>
       </div>
-
-      <div class="systems-grid">
-        <article class="system-card"><small>Motor</small><b>98%</b><div class="bar"><i style="width:98%"></i></div><span>Operacional</span></article>
-        <article class="system-card"><small>Combustível</small><b>98%</b><div class="bar"><i style="width:98%"></i></div><span>Operacional</span></article>
-        <article class="system-card warn"><small>Freios</small><b>82%</b><div class="bar"><i style="width:82%"></i></div><span>Não documentado</span></article>
-        <article class="system-card"><small>Suspensão</small><b>94%</b><div class="bar"><i style="width:94%"></i></div><span>Operacional</span></article>
-        <article class="system-card"><small>Elétrica</small><b>95%</b><div class="bar"><i style="width:95%"></i></div><span>Operacional</span></article>
-        <article class="system-card"><small>Transmissão</small><b>94%</b><div class="bar"><i style="width:94%"></i></div><span>Operacional</span></article>
-      </div>
-
-      <div class="two-col">
-        <section class="panel"><h3>Próximas revisões</h3>
-          <div class="service-row"><span>Óleo + filtro</span><b>A definir</b><small>Registrar na próxima substituição</small></div>
-          <div class="service-row"><span>Velas</span><b>A definir</b><small>NGK ILZKR8H8S • gap 0,80 mm</small></div>
-          <div class="service-row"><span>Fluido de freio</span><b>A definir</b><small>Documentar na próxima troca</small></div>
-        </section>
-        <section class="panel"><h3>Timeline técnica</h3>
-          <div class="timeline"><div><b>Aquisição do veículo</b><span>Fevereiro/2025 • estimado</span></div><div><b>Dossiê iniciado</b><span>08/07/2026 • confirmado</span></div><div><b>Configuração registrada</b><span>08/07/2026 • 200.925 km</span></div></div>
-        </section>
+      <div class="gauge-grid">
+        <article class="gauge ok"><span>Motor</span><b>98%</b><small>Operacional</small></article>
+        <article class="gauge ok"><span>Combustível</span><b>100%</b><small>Documentado</small></article>
+        <article class="gauge watch"><span>Freios</span><b>—</b><small>Não documentado</small></article>
+        <article class="gauge ok"><span>Suspensão</span><b>96%</b><small>OEM</small></article>
+        <article class="gauge ok"><span>Elétrica</span><b>95%</b><small>Operacional</small></article>
+        <article class="gauge ok"><span>Transmissão</span><b>96%</b><small>OEM 6MT</small></article>
       </div>
     </section>
 
     <section id="veiculo" class="page">
-      <div class="passport-card"><span class="eyebrow">Identificação</span><h2>Honda Civic Si FA5</h2><p>Dossiê técnico do veículo, com histórico documentado a partir da posse atual.</p></div>
-      <div class="spec-grid">
-        <div><span>Veículo</span><b>Honda Civic Si FA5</b></div><div><span>Ano/modelo</span><b>2007/2007</b></div><div><span>Cor</span><b>Vermelho</b></div><div><span>Motor</span><b>K20Z3</b></div><div><span>Transmissão</span><b>Manual 6 marchas</b></div><div><span>Quilometragem</span><b>200.925 km</b></div>
+      <div class="page-kicker">Identificação</div><h1>Veículo</h1>
+      <div class="cards two">
+        <div class="card"><h3>Dados principais</h3><div class="spec"><span>Modelo</span><b>Honda Civic Si FA5</b></div><div class="spec"><span>Ano/modelo</span><b>2007/2007</b></div><div class="spec"><span>Cor</span><b>Vermelho</b></div><div class="spec"><span>Motor</span><b>K20Z3</b></div><div class="spec"><span>Transmissão</span><b>Manual 6 marchas</b></div></div>
+        <div class="card"><h3>Histórico</h3><div class="spec"><span>Aquisição</span><b>Fevereiro/2025 · estimado</b></div><div class="spec"><span>Dossiê iniciado</span><b>08/07/2026</b></div><div class="spec"><span>Km inicial</span><b>200.925 km</b></div><div class="spec"><span>Histórico anterior</span><b>Indisponível</b></div></div>
       </div>
-      <div class="panel"><h3>Configuração atual</h3>
-        <div class="config-list"><p><b>Motor:</b> Honda K20Z3 OEM interno</p><p><b>Gerenciamento:</b> FuelTech FT600</p><p><b>Combustível:</b> Etanol E100</p><p><b>Admissão:</b> ITBs</p><p><b>Sistema de combustível:</b> Catch tank, bombas maiores, bicos maiores e linhas novas</p><p><b>Escape:</b> completo</p><p><b>Rodas:</b> OZ Ultraleggera 18”</p><p><b>Pneus:</b> Itaro Semi Slick 235/35R18</p><p><b>Pressão padrão:</b> 32 psi dianteira / 31 psi traseira</p></div>
+    </section>
+
+    <section id="config" class="page">
+      <div class="page-kicker">Estado atual</div><h1>Configuração</h1>
+      <div class="cards three">
+        <div class="card"><h3>Motor e ECU</h3><p>K20Z3 com internos originais, FuelTech FT600, etanol E100, ITBs e escape completo.</p></div>
+        <div class="card"><h3>Combustível</h3><p>Catch tank, bombas maiores, bicos maiores e linhas de combustível novas.</p></div>
+        <div class="card"><h3>Rodas e pneus</h3><p>OZ Ultraleggera 18” com Itaro Semi Slick 235/35R18. Pressão fria: 32/31 psi.</p></div>
+        <div class="card"><h3>Freios</h3><p>Sistema OEM Honda. Dados de pastilha, fluido e discos serão registrados na próxima manutenção.</p></div>
+        <div class="card"><h3>Suspensão</h3><p>Sistema OEM Honda. Alinhamento e medidas serão documentados na próxima intervenção.</p></div>
+        <div class="card"><h3>Documentação</h3><p>Registro técnico iniciado em 08/07/2026 com 200.925 km.</p></div>
       </div>
     </section>
 
     <section id="servicos" class="page">
-      <div class="page-head"><h2>Livro de Manutenções</h2><p>Registros oficiais do veículo a partir de 08/07/2026.</p></div>
-      <article class="service-card"><div><small>Registro 001</small><h3>Registro inicial do veículo</h3><p>08/07/2026 • 200.925 km</p></div><span>Concluído</span></article>
-      <article class="service-card pending"><div><small>Próximo registro</small><h3>Troca de óleo + filtro</h3><p>Produto, filtro, fotos e nota serão adicionados na substituição.</p></div><span>A definir</span></article>
+      <div class="page-kicker">Livro de serviços</div><h1>Manutenções</h1>
+      <div class="service-list">
+        <article class="service"><span>#001</span><div><h3>Registro inicial do veículo</h3><p>08/07/2026 · 200.925 km · Configuração atual documentada.</p></div><b>Concluído</b></article>
+        <article class="service ghost"><span>#002</span><div><h3>Troca de óleo + filtro</h3><p>Aguardando próxima substituição real.</p></div><b>A definir</b></article>
+        <article class="service ghost"><span>#003</span><div><h3>Velas de ignição</h3><p>Recomendação futura: NGK ILZKR8H8S, gap 0,80 mm.</p></div><b>A definir</b></article>
+      </div>
     </section>
 
-    <section id="cronograma" class="page"><div class="page-head"><h2>Cronograma</h2><p>Itens serão ativados conforme as substituições forem documentadas.</p></div><div class="systems-grid"><article class="system-card"><small>Óleo + filtro</small><b>A definir</b><span>Próxima troca</span></article><article class="system-card"><small>Velas</small><b>A definir</b><span>ILZKR8H8S</span></article><article class="system-card"><small>Fluido de freio</small><b>A definir</b><span>DOT4</span></article><article class="system-card"><small>Pneus</small><b>32/31 psi</b><span>Baseline frio</span></article></div></section>
+    <section id="cronograma" class="page">
+      <div class="page-kicker">Plano de manutenção</div><h1>Cronograma</h1>
+      <div class="cards three">
+        <div class="card meter"><h3>Óleo + filtro</h3><div class="bar"><i style="width:35%"></i></div><p>Definir após próxima troca documentada.</p></div>
+        <div class="card meter"><h3>Velas</h3><div class="bar"><i style="width:20%"></i></div><p>Inspecionar na próxima revisão.</p></div>
+        <div class="card meter"><h3>Fluido de freio</h3><div class="bar"><i style="width:45%"></i></div><p>Registrar marca e data na troca.</p></div>
+      </div>
+    </section>
 
-    <section id="docs" class="page"><div class="page-head"><h2>Documentos</h2><p>Área reservada para manuais, notas fiscais, mapas FT e relatórios.</p></div><div class="doc-grid"><div>Manual Honda</div><div>CRLV</div><div>Notas fiscais</div><div>Mapas FuelTech</div><div>Dinamômetro</div><div>Alinhamento</div></div></section>
+    <section id="documentos" class="page">
+      <div class="page-kicker">Arquivo técnico</div><h1>Documentos</h1>
+      <div class="doc-grid">
+        <button>Manual Honda</button><button>CRLV</button><button>Notas fiscais</button><button>Mapas FuelTech</button><button>Dinamômetro</button><button>Alinhamento</button>
+      </div>
+    </section>
 
-    <section id="galeria" class="page"><div class="page-head"><h2>Galeria</h2><p>Fotos ficam organizadas por categoria; timeline permanece técnica e sem fotos.</p></div><div class="gallery-grid"><div>Exterior</div><div>Interior</div><div>Motor</div><div>Rodas</div><div>Suspensão</div><div>Detalhamento</div></div></section>
+    <section id="galeria" class="page">
+      <div class="page-kicker">Registro visual</div><h1>Galeria</h1>
+      <div class="gallery-grid"><div>Exterior</div><div>Interior</div><div>Motor</div><div>Rodas</div><div>Detalhamento</div><div>Track Day</div></div>
+    </section>
 
-    <section id="projeto" class="page"><div class="passport-card"><span class="eyebrow">Filosofia</span><h2>Project FA5</h2><p>Construído para preservar a identidade do Honda Civic Si FA5, combinando confiabilidade OEM, preparação aspirada, documentação técnica e manutenção rastreável.</p></div></section>
+    <section id="especificacoes" class="page">
+      <div class="page-kicker">Manual técnico</div><h1>Especificações</h1>
+      <div class="cards two">
+        <div class="card"><h3>Rodas e pneus</h3><div class="spec"><span>Pneu atual</span><b>Itaro 235/35R18</b></div><div class="spec"><span>Pressão fria</span><b>D 32 psi / T 31 psi</b></div><div class="spec"><span>Torque rodas</span><b>108 N·m / 80 lbf·ft</b></div></div>
+        <div class="card"><h3>Velas</h3><div class="spec"><span>Original Honda</span><b>NGK IFR7G11KS</b></div><div class="spec"><span>Recomendação E100</span><b>NGK ILZKR8H8S</b></div><div class="spec"><span>Gap inicial</span><b>0,80 mm</b></div></div>
+      </div>
+    </section>
 
-    <section id="tecnica" class="page"><div class="page-head"><h2>Especificações Técnicas</h2><p>Ficha técnica resumida do veículo e da configuração atual.</p></div><div class="spec-grid"><div><span>Torque das rodas</span><b>108 N·m / 80 lbf·ft</b></div><div><span>Pneus</span><b>Itaro 235/35R18</b></div><div><span>Pressão</span><b>32 / 31 psi</b></div><div><span>Velas futuras</span><b>NGK ILZKR8H8S</b></div><div><span>Combustível</span><b>Etanol E100</b></div><div><span>ECU</span><b>FuelTech FT600</b></div></div></section>
+    <section id="qr" class="page">
+      <div class="page-kicker">Acesso</div><h1>QR Code</h1>
+      <div class="cards two"><div class="card"><h3>URL oficial</h3><p>https://hagsantos1-rgb.github.io/project-fa5/</p></div><div class="qr-box">PROJECT FA5<br><span>QR DEFINITIVO</span></div></div>
+    </section>
   </main>
 </div>
 <script src="assets/js/app.js"></script>

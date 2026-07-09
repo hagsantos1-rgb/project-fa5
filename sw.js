@@ -1,3 +1,4 @@
-const CACHE='project-fa5-passport-v1';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./','./index.html','./assets/css/style.css','./assets/js/app.js'])))});
-self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))});
+const CACHE='project-fa5-cluster-v5';
+const ASSETS=['./','./index.html','./assets/css/style.css','./assets/js/app.js','./manifest.webmanifest'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
+self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
