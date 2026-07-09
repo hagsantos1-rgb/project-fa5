@@ -1,85 +1,97 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#080a0d" />
-  <title>Project FA5 — Dossiê Técnico</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="assets/css/app.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project FA5 — Digital Vehicle Passport</title>
+<meta name="theme-color" content="#05070a">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">FA5</span><div><b>PROJECT FA5</b><small>Dossiê Técnico</small></div></div>
-      <nav class="nav" id="nav">
-        <button data-page="home" class="active">Início</button>
-        <button data-page="vehicle">Veículo</button>
-        <button data-page="service">Serviços</button>
-        <button data-page="timeline">Histórico</button>
-        <button data-page="docs">Documentos</button>
-        <button data-page="settings">Sistema</button>
-      </nav>
-      <div class="sidebar-foot"><small>GitHub Pages</small><b>V3.0</b></div>
-    </aside>
-
-    <main class="app">
-      <header class="topbar">
-        <div><small class="eyebrow">Honda Civic Si FA5</small><h1 id="pageTitle">Início</h1></div>
-        <button class="install" id="installBtn">Instalar App</button>
-      </header>
-
-      <section class="page active" id="home">
-        <div class="hero-card">
-          <div class="hero-copy"><span class="status-dot"></span><small>Operacional</small><h2>PROJECT FA5</h2><p>Honda Civic Si FA5 • 2007/2007 • 200.925 km</p></div>
-          <div class="hero-meter"><span>100%</span><small>Histórico atual</small></div>
-        </div>
-        <div class="grid six" id="healthGrid"></div>
-        <div class="grid two">
-          <article class="panel"><h3>Próximas revisões</h3><div id="maintenanceList"></div></article>
-          <article class="panel"><h3>Linha do tempo</h3><div id="miniTimeline"></div></article>
-        </div>
-      </section>
-
-      <section class="page" id="vehicle">
-        <div class="grid two">
-          <article class="panel certificate"><small>Certificado do veículo</small><h2>Honda Civic Si FA5</h2><div class="cert-grid" id="vehicleInfo"></div></article>
-          <article class="panel"><h3>Configuração atual</h3><div id="configList"></div></article>
-        </div>
-      </section>
-
-      <section class="page" id="service">
-        <article class="panel"><h3>Livro de Serviços</h3><div id="serviceList" class="service-list"></div></article>
-      </section>
-
-      <section class="page" id="timeline">
-        <article class="panel"><h3>Histórico por data</h3><div id="timelineList" class="timeline"></div></article>
-      </section>
-
-      <section class="page" id="docs">
-        <div class="grid three">
-          <article class="doc-card"><span>📄</span><b>Manuais</b><small>Pendente</small></article>
-          <article class="doc-card"><span>🧾</span><b>Notas fiscais</b><small>Pendente</small></article>
-          <article class="doc-card"><span>📷</span><b>Fotos</b><small>Pendente</small></article>
-          <article class="doc-card"><span>📊</span><b>Dinamômetro</b><small>Pendente</small></article>
-          <article class="doc-card"><span>⚙️</span><b>FuelTech</b><small>Pendente</small></article>
-          <article class="doc-card"><span>🔗</span><b>QR Code</b><small>Ativo</small></article>
-        </div>
-        <article class="panel qr-panel"><h3>QR de acesso</h3><img src="qr/qr_project_fa5_v3.png" alt="QR Project FA5"><p>URL: https://hagsantos1-rgb.github.io/project-fa5/</p></article>
-      </section>
-
-      <section class="page" id="settings">
-        <div class="grid two">
-          <article class="panel"><h3>Adicionar registro</h3><p>V3 está preparada para a próxima etapa: cadastro dinâmico com banco local e sincronização futura.</p><button class="primary" onclick="alert('Cadastro dinâmico entra na V3.1')">Novo serviço</button></article>
-          <article class="panel"><h3>Exportar</h3><p>Use o navegador para gerar PDF do dossiê atual.</p><button class="primary ghost" onclick="window.print()">Exportar PDF</button></article>
-        </div>
-      </section>
-    </main>
-
-    <nav class="bottom-nav" id="bottomNav">
-      <button data-page="home" class="active">Início</button><button data-page="vehicle">Veículo</button><button data-page="service">Serviços</button><button data-page="timeline">Histórico</button><button data-page="docs">Docs</button>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">FA5</div>
+      <div><strong>PROJECT FA5</strong><span>Dossiê Técnico</span></div>
+    </div>
+    <nav>
+      <button class="nav-item active" data-page="dashboard">Dashboard</button>
+      <button class="nav-item" data-page="veiculo">Veículo</button>
+      <button class="nav-item" data-page="servicos">Manutenções</button>
+      <button class="nav-item" data-page="cronograma">Cronograma</button>
+      <button class="nav-item" data-page="docs">Documentos</button>
+      <button class="nav-item" data-page="galeria">Galeria</button>
+      <button class="nav-item" data-page="projeto">Projeto</button>
+      <button class="nav-item" data-page="tecnica">Especificações</button>
     </nav>
-  </div>
-  <script src="assets/js/app.js"></script>
+    <div class="version">GitHub Pages<br><b>Premium Passport</b></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><span class="eyebrow">Digital Vehicle Passport</span><h1 id="pageTitle">Dashboard</h1></div>
+      <button class="install" id="installBtn">Instalar App</button>
+    </header>
+
+    <section id="dashboard" class="page active">
+      <div class="hero-card">
+        <div>
+          <span class="status-dot"></span><span class="status-text">OPERACIONAL</span>
+          <h2>PROJECT FA5</h2>
+          <p>Honda Civic Si FA5 • 2007/2007 • 200.925 km</p>
+        </div>
+        <div class="score"><span>98%</span><small>Saúde geral</small></div>
+      </div>
+
+      <div class="systems-grid">
+        <article class="system-card"><small>Motor</small><b>98%</b><div class="bar"><i style="width:98%"></i></div><span>Operacional</span></article>
+        <article class="system-card"><small>Combustível</small><b>98%</b><div class="bar"><i style="width:98%"></i></div><span>Operacional</span></article>
+        <article class="system-card warn"><small>Freios</small><b>82%</b><div class="bar"><i style="width:82%"></i></div><span>Não documentado</span></article>
+        <article class="system-card"><small>Suspensão</small><b>94%</b><div class="bar"><i style="width:94%"></i></div><span>Operacional</span></article>
+        <article class="system-card"><small>Elétrica</small><b>95%</b><div class="bar"><i style="width:95%"></i></div><span>Operacional</span></article>
+        <article class="system-card"><small>Transmissão</small><b>94%</b><div class="bar"><i style="width:94%"></i></div><span>Operacional</span></article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel"><h3>Próximas revisões</h3>
+          <div class="service-row"><span>Óleo + filtro</span><b>A definir</b><small>Registrar na próxima substituição</small></div>
+          <div class="service-row"><span>Velas</span><b>A definir</b><small>NGK ILZKR8H8S • gap 0,80 mm</small></div>
+          <div class="service-row"><span>Fluido de freio</span><b>A definir</b><small>Documentar na próxima troca</small></div>
+        </section>
+        <section class="panel"><h3>Timeline técnica</h3>
+          <div class="timeline"><div><b>Aquisição do veículo</b><span>Fevereiro/2025 • estimado</span></div><div><b>Dossiê iniciado</b><span>08/07/2026 • confirmado</span></div><div><b>Configuração registrada</b><span>08/07/2026 • 200.925 km</span></div></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="veiculo" class="page">
+      <div class="passport-card"><span class="eyebrow">Identificação</span><h2>Honda Civic Si FA5</h2><p>Dossiê técnico do veículo, com histórico documentado a partir da posse atual.</p></div>
+      <div class="spec-grid">
+        <div><span>Veículo</span><b>Honda Civic Si FA5</b></div><div><span>Ano/modelo</span><b>2007/2007</b></div><div><span>Cor</span><b>Vermelho</b></div><div><span>Motor</span><b>K20Z3</b></div><div><span>Transmissão</span><b>Manual 6 marchas</b></div><div><span>Quilometragem</span><b>200.925 km</b></div>
+      </div>
+      <div class="panel"><h3>Configuração atual</h3>
+        <div class="config-list"><p><b>Motor:</b> Honda K20Z3 OEM interno</p><p><b>Gerenciamento:</b> FuelTech FT600</p><p><b>Combustível:</b> Etanol E100</p><p><b>Admissão:</b> ITBs</p><p><b>Sistema de combustível:</b> Catch tank, bombas maiores, bicos maiores e linhas novas</p><p><b>Escape:</b> completo</p><p><b>Rodas:</b> OZ Ultraleggera 18”</p><p><b>Pneus:</b> Itaro Semi Slick 235/35R18</p><p><b>Pressão padrão:</b> 32 psi dianteira / 31 psi traseira</p></div>
+      </div>
+    </section>
+
+    <section id="servicos" class="page">
+      <div class="page-head"><h2>Livro de Manutenções</h2><p>Registros oficiais do veículo a partir de 08/07/2026.</p></div>
+      <article class="service-card"><div><small>Registro 001</small><h3>Registro inicial do veículo</h3><p>08/07/2026 • 200.925 km</p></div><span>Concluído</span></article>
+      <article class="service-card pending"><div><small>Próximo registro</small><h3>Troca de óleo + filtro</h3><p>Produto, filtro, fotos e nota serão adicionados na substituição.</p></div><span>A definir</span></article>
+    </section>
+
+    <section id="cronograma" class="page"><div class="page-head"><h2>Cronograma</h2><p>Itens serão ativados conforme as substituições forem documentadas.</p></div><div class="systems-grid"><article class="system-card"><small>Óleo + filtro</small><b>A definir</b><span>Próxima troca</span></article><article class="system-card"><small>Velas</small><b>A definir</b><span>ILZKR8H8S</span></article><article class="system-card"><small>Fluido de freio</small><b>A definir</b><span>DOT4</span></article><article class="system-card"><small>Pneus</small><b>32/31 psi</b><span>Baseline frio</span></article></div></section>
+
+    <section id="docs" class="page"><div class="page-head"><h2>Documentos</h2><p>Área reservada para manuais, notas fiscais, mapas FT e relatórios.</p></div><div class="doc-grid"><div>Manual Honda</div><div>CRLV</div><div>Notas fiscais</div><div>Mapas FuelTech</div><div>Dinamômetro</div><div>Alinhamento</div></div></section>
+
+    <section id="galeria" class="page"><div class="page-head"><h2>Galeria</h2><p>Fotos ficam organizadas por categoria; timeline permanece técnica e sem fotos.</p></div><div class="gallery-grid"><div>Exterior</div><div>Interior</div><div>Motor</div><div>Rodas</div><div>Suspensão</div><div>Detalhamento</div></div></section>
+
+    <section id="projeto" class="page"><div class="passport-card"><span class="eyebrow">Filosofia</span><h2>Project FA5</h2><p>Construído para preservar a identidade do Honda Civic Si FA5, combinando confiabilidade OEM, preparação aspirada, documentação técnica e manutenção rastreável.</p></div></section>
+
+    <section id="tecnica" class="page"><div class="page-head"><h2>Especificações Técnicas</h2><p>Ficha técnica resumida do veículo e da configuração atual.</p></div><div class="spec-grid"><div><span>Torque das rodas</span><b>108 N·m / 80 lbf·ft</b></div><div><span>Pneus</span><b>Itaro 235/35R18</b></div><div><span>Pressão</span><b>32 / 31 psi</b></div><div><span>Velas futuras</span><b>NGK ILZKR8H8S</b></div><div><span>Combustível</span><b>Etanol E100</b></div><div><span>ECU</span><b>FuelTech FT600</b></div></div></section>
+  </main>
+</div>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
